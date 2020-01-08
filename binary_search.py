@@ -1,7 +1,7 @@
 # Binary Search Algorithm #
 # Goal: Within a given list; Return index position of arg_value. If not found, return -1. #
 
-ordered_list = list(range(-984189, 9989859))
+ordered_list = list(range(-543,2345))
 
 def binary_search(arg_value, arg_ordered_list): 
 	''' Return index position of arg_value within sorted list using binary search algorithm. If arg_value not found, return -1.\n
@@ -17,7 +17,7 @@ def binary_search(arg_value, arg_ordered_list):
 	while first_pos <= last_pos:    
 		mid_point = (first_pos + last_pos) // 2 # added parentheses to equation. Oops
 		
-		print('\n', 'List: ', arg_ordered_list, '\n', 'Length of List: ', arg_ordered_list.__len__(), '\n', 'Looking for int: ', arg_value, '\n', 'First Position: ', first_pos, '\n', 'Last Position: ', last_pos, '\n', 'Mid Point: ', mid_point)
+		print('\n', 'List: ', arg_ordered_list[first_pos : last_pos], '\n', 'Length of List: ', arg_ordered_list.__len__(), '\n', 'Looking for int: ', arg_value, '\n', 'First Position: ', first_pos, '\n', 'Last Position: ', last_pos, '\n', 'Mid Point: ', mid_point)
 		
 		if arg_ordered_list[mid_point] == arg_value:
 			return mid_point # was arg_value
@@ -31,6 +31,6 @@ def binary_search(arg_value, arg_ordered_list):
 	return -1
 
 def _run():
-    print('Item in index location: ', binary_search(42069, ordered_list))
+    print('Item in index location: ', binary_search(475, ordered_list))
 
 _run()
